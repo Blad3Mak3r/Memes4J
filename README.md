@@ -8,40 +8,40 @@
 
 ``getRandomMeme()`` or ``getRandomMeme(string)``.
 
+**Create the PendingRequest object**
 ```java
-import tv.blademaker.PendingRequest;
-import tv.blademaker.Reddit;
-import tv.blademaker.RedditMeme;
-import java.util.concurrent.CompletableFuture;
+PendingRequest request = Reddit.getRandomMeme()
+```
 
-class Main {
-    // Create the request
-    PendingRequest rq = Reddit.getRandomMeme()
+**Async Consumer/BiConsumer with ``queue()``**
+```java
+request.queue((meme) -> {
+    System.out.println(meme.toString());
+}, (error) -> {
+    error.printStackTrace();
+})
+```
 
-    // Use Async consumers
-    rq.queue((meme) -> {
-        System.out.println(meme.toString());
-    }, (error) -> {
-        error.printStackTrace();
-    })
-    
-    // Get a CompletableFuture
-    CompletableFuture<RedditMeme> future = rq.submit();
-    
-    future.whenCompleteAsync((meme) -> {
-        System.out.println(meme.toString());
-    }, (throwable) -> {
-        throwable.printStackTrace();
-    })
+**Async CompletableFuture with ``sumbit()``**
+```java
+CompletableFuture<RedditMeme> future = request.submit();
 
-    // Sync return
-    try {
-        RedditMeme meme = rq.complete();
-        System.out.println(meme.toString());
-    } catch(Exception ex) {
-        ex.printStackTrace();
-    }
+future.whenCompleteAsync((meme) -> {
+    System.out.println(meme.toString());
+}, (throwable) -> {
+    throwable.printStackTrace();
+})
+```
+
+**Sync ``complete()``**
+```java
+try {
+    RedditMeme meme = request.complete();
+    System.out.println(meme.toString());
+} catch(Exception ex) {
+    ex.printStackTrace();
 }
+
 ```
 
 ## How to download
