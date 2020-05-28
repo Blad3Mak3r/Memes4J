@@ -8,5 +8,9 @@ public class GetDankMeme {
         RedditMeme meme = Reddit.getRandomMeme("dankmemes").complete();
 
         System.out.println(meme.toString());
+
+        RedditMeme meme2 = Reddit.getRandomMeme().complete();
+
+        System.out.println(meme2.toString());
     }
 }
