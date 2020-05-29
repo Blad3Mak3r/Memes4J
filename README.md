@@ -14,7 +14,9 @@ You can also get this package for other programming languages:
 | [TS/JS](https://github.com/Blad3Mak3r/RedditMemes)     |
 
 # Getting started
-**Reddit.getRandomMeme()** returns a **PendingRequest** class which can be asynchronously terminated with **queue()**, **submit()** or sync with **complete()**
+This package requires **Java 9** or higher version.
+
+The static method **Reddit.getRandomMeme()** returns a **PendingRequest** class which can be asynchronously terminated with **queue()**, **submit()** or sync with **complete()**
 
 ### Get a random meme
 
