@@ -1,6 +1,10 @@
 # RedditMemesJAVA
 [![](https://jitpack.io/v/Blad3Mak3r/RedditMemesJava.svg)](https://jitpack.io/#Blad3Mak3r/RedditMemesJava)
 
+**This package is behind used in production by [HUGE](https://hugebot.net)**
+
+[![](https://i.imgur.com/Jyb6NZC.png)](https://hugebot.net)
+
 # Getting started
 **Reddit.getRandomMeme()** returns a **PendingRequest** class which can be asynchronously terminated with **queue()**, **submit()** or sync with **complete()**
 
