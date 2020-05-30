@@ -1,5 +1,5 @@
 # RedditMemesJAVA
-[![](https://jitpack.io/v/Blad3Mak3r/RedditMemesJava.svg)](https://jitpack.io/#Blad3Mak3r/RedditMemesJava)
+[![](https://jitpack.io/v/Blad3Mak3r/Memes4J.svg)](https://jitpack.io/#Blad3Mak3r/Memes4J)
 
 **This package is behind used in production by [HUGE](https://hugebot.net)**
 
@@ -10,7 +10,7 @@
 You can also get this package for other programming languages:
 | Packages                                               |
 |--------------------------------------------------------|
-| [Java](https://github.com/Blad3Mak3r/RedditMemesJava)  |
+| [Java](https://github.com/Blad3Mak3r/Memes4J)  |
 | [TS/JS](https://github.com/Blad3Mak3r/RedditMemes)     |
 
 # Getting started
@@ -86,7 +86,7 @@ dependencies {
 ```java
 <dependency>
     <groupId>com.github.Blad3Mak3r</groupId>
-    <artifactId>RedditMemesJava</artifactId>
-    <version>v0.1.0</version>
+    <artifactId>Memes4J</artifactId>
+    <version>0.1.0</version>
 </dependency>
 ```
