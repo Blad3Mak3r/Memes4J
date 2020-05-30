@@ -6,6 +6,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
+
 public class Meme {
     private final String id;
     private final String subreddit;
@@ -19,6 +20,12 @@ public class Meme {
     private final Boolean nsfw;
     private final Long createdUtc;
 
+    /**
+     * Create a Meme object
+     *
+     * @param obj a JSONObject with the raw json content of the Reddit API
+     * @throws IllegalArgumentException when the object is empty
+     */
     public Meme(JSONObject obj) throws IllegalArgumentException {
         if (obj == null) throw new IllegalArgumentException("Object is empty.");
         id = obj.getString("id");
