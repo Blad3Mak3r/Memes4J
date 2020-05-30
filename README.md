@@ -1,4 +1,4 @@
-# RedditMemesJAVA
+# Memes4J
 [![](https://jitpack.io/v/Blad3Mak3r/Memes4J.svg)](https://jitpack.io/#Blad3Mak3r/Memes4J)
 
 **This package is behind used in production by [HUGE](https://hugebot.net)**
@@ -16,7 +16,7 @@ You can also get this package for other programming languages:
 # Getting started
 This package requires **Java 9** or higher version.
 
-The static method **Reddit.getRandomMeme()** returns a **PendingRequest** class which can be asynchronously terminated with **queue()**, **submit()** or sync with **complete()**
+The static method **Memes4J.getRandomMeme()** returns a **PendingRequest** class which can be asynchronously terminated with **queue()**, **submit()** or sync with **complete()**
 
 ### Get a random meme
 
@@ -24,7 +24,7 @@ The static method **Reddit.getRandomMeme()** returns a **PendingRequest** class 
 
 **Create the PendingRequest object**
 ```java
-PendingRequest request = Reddit.getRandomMeme()
+PendingRequest request = Memes4J.getRandomMeme()
 ```
 
 **Async Consumer/BiConsumer with ``queue()``**
@@ -38,7 +38,7 @@ request.queue((meme) -> {
 
 **Async CompletableFuture with ``sumbit()``**
 ```java
-CompletableFuture<RedditMeme> future = request.submit();
+CompletableFuture<Meme> future = request.submit();
 
 future.whenCompleteAsync((meme) -> {
     System.out.println(meme.toString());
@@ -50,7 +50,7 @@ future.whenCompleteAsync((meme) -> {
 **Sync ``complete()``**
 ```java
 try {
-    RedditMeme meme = request.complete();
+    Meme meme = request.complete();
     System.out.println(meme.toString());
 } catch(Exception ex) {
     ex.printStackTrace();
@@ -70,7 +70,7 @@ allprojects {
 ```
 ```java
 dependencies {
-        implementation 'com.github.Blad3Mak3r:RedditMemesJava:v0.1.0'
+        implementation 'com.github.Blad3Mak3r:Memes4J:0.1.1'
 }
 ```
 
@@ -87,6 +87,6 @@ dependencies {
 <dependency>
     <groupId>com.github.Blad3Mak3r</groupId>
     <artifactId>Memes4J</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
 </dependency>
 ```
