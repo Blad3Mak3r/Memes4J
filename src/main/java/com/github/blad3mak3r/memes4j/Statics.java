@@ -1,4 +1,4 @@
-package tv.blademaker;
+package com.github.blad3mak3r.memes4j;
 
 import java.util.List;
 

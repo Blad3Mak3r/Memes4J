@@ -1,13 +1,10 @@
-package tv.blademaker;
+package com.github.blad3mak3r.memes4j;
 
 import kong.unirest.*;
 
 import java.util.Random;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
-import java.util.function.Consumer;
 
-public class Reddit {
+public class Memes4J {
 
     private static final UnirestInstance unirest = new UnirestInstance(
             new Config().addDefaultHeader("User-Agent", Statics.USER_AGENT)

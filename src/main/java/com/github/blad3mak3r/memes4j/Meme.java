@@ -1,4 +1,4 @@
-package tv.blademaker;
+package com.github.blad3mak3r.memes4j;
 
 import kong.unirest.json.JSONArray;
 import kong.unirest.json.JSONObject;
@@ -6,7 +6,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-public class RedditMeme {
+public class Meme {
     private final String id;
     private final String subreddit;
     private final String title;
@@ -19,7 +19,7 @@ public class RedditMeme {
     private final Boolean nsfw;
     private final Long createdUtc;
 
-    public RedditMeme(JSONObject obj) throws IllegalArgumentException {
+    public Meme(JSONObject obj) throws IllegalArgumentException {
         if (obj == null) throw new IllegalArgumentException("Object is empty.");
         id = obj.getString("id");
         subreddit = obj.getString("subreddit");
@@ -99,7 +99,7 @@ public class RedditMeme {
                 '}';
     }
 
-    protected static synchronized RedditMeme buildFromJSON(JSONObject node) throws IllegalArgumentException {
+    protected static synchronized Meme buildFromJSON(JSONObject node) throws IllegalArgumentException {
         if (node.getJSONObject("data") == null) throw new IllegalArgumentException();
 
         JSONObject data = node.getJSONObject("data");
@@ -111,7 +111,7 @@ public class RedditMeme {
 
             JSONObject sel = posts.getJSONObject(random).getJSONObject("data");
             if (isImage(sel.getString("url"))) {
-                return new RedditMeme(sel);
+                return new Meme(sel);
             }
         }
 
