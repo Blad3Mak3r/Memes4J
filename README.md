@@ -75,7 +75,7 @@ dependencies {
 ```
 
 ***With Maven***
-```java
+```maven
 <repositories>
     <repository>
         <id>jitpack.io</id>
@@ -83,7 +83,7 @@ dependencies {
     </repository>
 </repositories>
 ```
-```java
+```maven
 <dependency>
     <groupId>com.github.Blad3Mak3r</groupId>
     <artifactId>Memes4J</artifactId>
