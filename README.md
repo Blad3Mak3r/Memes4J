@@ -3,7 +3,7 @@
 
 **This package is behind used in production by [HUGE](https://hugebot.net)**
 
-[![](https://i.imgur.com/Jyb6NZC.png)](https://hugebot.net)
+[![](https://user-images.githubusercontent.com/40395702/109928673-fb36b480-7cc5-11eb-9691-aeadc6af6099.png)](https://hugebot.net)
 
 - - -
 
