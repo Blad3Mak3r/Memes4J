@@ -10,8 +10,9 @@
 You can also get this package for other programming languages:
 | Packages                                               |
 |--------------------------------------------------------|
-| [Java](https://github.com/Blad3Mak3r/Memes4J)  |
-| [TS/JS](https://github.com/Blad3Mak3r/RedditMemes)     |
+| [Java](https://github.com/Blad3Mak3r/Memes4J)          |
+| [Node.js](https://github.com/Blad3Mak3r/RedditMemes)   |
+| [Deno](https://github.com/Blad3Mak3r/DenoMemes)        |
 
 # Getting started
 This package requires **Java 9** or higher version.
